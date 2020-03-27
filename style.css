@@ -50,8 +50,8 @@ p {
   position: relative;
   background: #ffffff;
   width: 100%;
-  padding: 7vh 0 7vh 0;
-  height: 100%;
+  max-height: 1080px;
+  height: 100vh;
   margin: 0 auto;
   overflow: hidden;
 }
@@ -60,6 +60,7 @@ p {
   max-width: 1320px;
   width: 100%;
   display: block;
+  padding-top: 7vh;
   margin: 0 auto 4vh auto;
 }
 
@@ -236,5 +237,103 @@ p {
     min-height: 270px;
     height: 100%;
   }
+}
+
+.advantages-page {
+  background: #f8f8f8;
+}
+
+.advantages-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-height: 1080px;
+  height: 100vh;
+}
+
+.advantages-title {
+  padding: 0 0 4vh;
+}
+
+.advantages-card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+}
+
+.advantage-card {
+  padding: 20px 0 20px 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 40%;
+          flex: 0 1 40%;
+}
+
+.advantage-card:nth-child(2n) {
+  margin-left: 10%;
+}
+
+.advantage-card__title {
+  position: relative;
+  padding-left: 20px;
+  z-index: 1;
+  cursor: default;
+}
+
+.advantage-card__title::before {
+  content: "";
+  position: absolute;
+  top: 9px;
+  left: 0px;
+  width: 8px;
+  height: 8px;
+  background-color: #e14646;
+  z-index: 0;
+}
+
+.advantage-card__title:hover {
+  z-index: 1;
+}
+
+.advantage-card__title:hover::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 80%;
+  height: 15px;
+  background-color: rgba(225, 70, 70, 0.5);
+  z-index: -1;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+}
+
+.advantage-card__wraper {
+  margin: 0 32%;
+}
+
+.invisible {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

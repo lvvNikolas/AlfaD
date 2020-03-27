@@ -49,9 +49,9 @@ p {
   position: relative;
   background: #ffffff;
   width: 100%;
-  padding: 7vh 0 7vh 0;
 
-  height: 100%;
+  max-height: 1080px;
+  height: 100vh;
 
   margin: 0 auto;
   overflow: hidden;
@@ -61,6 +61,7 @@ p {
   max-width: 1320px;
   width: 100%;
   display: block;
+  padding-top: 7vh;
   margin: 0 auto 4vh auto;
 }
 
@@ -73,33 +74,32 @@ p {
   margin: auto;
   align-items: flex-start;
   flex-direction: row;
-  
 }
 
 .card-container {
-    position: relative;
+  position: relative;
   display: flex;
   flex-direction: row;
   flex: 0 1 50%;
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  
-  &::after{
-      content: "";
-      width: 850px;
-      height: 900px;
-      position: absolute;
-      top:-10%;
-      left: -12%;
-      z-index: 0;
-     background: radial-gradient(50% 50%, rgba(0, 0, 0, 0.1), rgba(256, 256, 256, 0));
+
+  &::after {
+    content: "";
+    width: 850px;
+    height: 900px;
+    position: absolute;
+    top: -10%;
+    left: -12%;
+    z-index: 0;
+    background: radial-gradient(50% 50%, rgba(0, 0, 0, 0.1), rgba(256, 256, 256, 0));
   }
 }
 
 .card-item {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
   flex: 0 1 300px;
   margin: 20px;
   padding: 12px 12px 80px 12px;
@@ -184,12 +184,12 @@ p {
     visibility: hidden;
     position: relative;
   }
-  .card-container{
-    &::after{
-        content: "";
-        
-        top:-10%;
-        left: -6%;
+  .card-container {
+    &::after {
+      content: "";
+
+      top: -10%;
+      left: -6%;
     }
   }
   .card-item {
@@ -212,10 +212,9 @@ p {
     max-width: 320px;
     width: 100%;
     background-image: none;
-    &::after{
-        content: "";
-        background: none;
-        
+    &::after {
+      content: "";
+      background: none;
     }
   }
   .card-item {
@@ -227,3 +226,102 @@ p {
   }
 }
 //End of services section------------------------------------------------------------------------------------------------------------------
+
+//Start of advantages section--------------------------------------------------------------------------------------------------------------
+.advantages-page {
+  background: #f8f8f8;
+}
+.img-header-block {
+}
+.img-first-quad {
+}
+.img-second-quad {
+}
+.img-third-quad {
+}
+.img-fourth-quad {
+}
+.img-fifth-quad {
+}
+.img- {
+}
+.advantages-container {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 50%;
+  justify-content: center;
+  max-height: 1080px;
+  height: 100vh;
+}
+.advantages-title {
+  padding: 0 0 4vh;
+}
+.advantages-card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 0 1 50%;
+}
+.advantage-card {
+  padding: 20px 0 20px 0;
+  flex: 0 1 40%;
+  &:nth-child(2n) {
+    margin-left: 10%;
+  }
+
+  // .advantage-card__title
+
+  &__title {
+    position: relative;
+    padding-left: 20px;
+    z-index: 1;
+    cursor: default;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: 0px;
+      width: 8px;
+      height: 8px;
+      background-color: #e14646;
+
+      z-index: 0;
+    }
+    &:hover {
+      z-index: 1;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 5px;
+        left: 0;
+        width: 80%;
+        height: 15px;
+        background-color: rgba($color: #e14646, $alpha: 0.5);
+        z-index: -1;
+        transition: 0.5s;
+        -webkit-transition: 0.5s;
+        -moz-transition: 0.5s;
+        -ms-transition: 0.5s;
+        -o-transition: 0.5s;
+      }
+    }
+  }
+
+  // .advantage-card__text
+
+  &__text {
+      
+  }
+
+
+  &__wraper {
+    margin: 0 32%;
+  }
+  
+}
+.invisible{
+    display: none;
+}
+
+//End of advantages section----------------------------------------------------------------------------------------------------------------

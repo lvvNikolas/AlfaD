@@ -1,13 +1,19 @@
 window.onload = function(){
-
-var cards_array = document.querySelectorAll(".card-item");
-for(var i = 0; i<cards_array.length; i++){
-    cards_array[i].addEventListener("mouseover",function(){
-        if(i == 0){
-            document.querySelector(".img-design").style
+alert("connected");
+var wraped_text = document.querySelectorAll(".advantage-card__text");
+var hovered_title = document.querySelectorAll(".advantage-card__title");
+for(var i = 0; i<hovered_title.length; i++){
+    hovered_title[i].addEventListener("mouseover", function(){
+        for(var j = 0; j<wraped_text.length; j++){
+            var a = wraped_text[j];
+            a.toggleClass("invisible")
+            
         }
     });
-};
 
 
-};
+}
+
+
+
+}
