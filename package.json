@@ -1,0 +1,24 @@
+{
+  "name": "alphad_serv_adv",
+  "version": "1.0.0",
+  "description": "services and advantages pages html scss code",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/drony0610/AlfaD.git"
+  },
+  "author": "Andrew Kovalev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/drony0610/AlfaD/issues"
+  },
+  "homepage": "https://github.com/drony0610/AlfaD#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.13.1"
+  }
+}
