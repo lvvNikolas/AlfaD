@@ -1,6 +1,4 @@
-.img-phone{
-    visibility: hidden;
-}
+
 // here responsive variables for font sizes
 $desktop_h1: 100px;
 $desktop_h2: 50px;
@@ -197,24 +195,33 @@ p {
 
 }
 
+@mixin animation{
+    transition-property: bottom;
+    Transition-duration: 0.5s;
+}
+
 .img-design {
     left: 15%;
     bottom: 29%;
+    @include animation();
 }
 
 .img-development {
     left: 25%;
     bottom: 26%;
+    @include animation();
 }
 
 .img-seo {
     left: 35%;
     bottom: 23%;
+    @include animation();
 }
 
 .img-support {
     left: 45%;
     bottom: 20%;
+    @include animation();
 }
 
 //Adaptive size
@@ -341,9 +348,9 @@ p {
 }
 
 
-.img-quad-shadow {
+.img-phone {
     top: auto;
-    bottom: 0;
+    bottom: 10%;
     right: 50%;
     transform: translateX(50%);
 }
@@ -388,10 +395,14 @@ p {
     height: 100%;
     position: relative;
     overflow-wrap: break-word;
-
+    cursor: default;
     &:hover {
         .advantage-card__text {
             display: inline-block;
+            cursor: default;
+        }
+        .advantage-card__wraper{
+            transform: rotate(180deg);
         }
     }
 
@@ -400,6 +411,7 @@ p {
 
     &__title {
         padding-left: 20px;
+        padding-bottom: 10px;
 
         &::before {
             content: "";
@@ -439,13 +451,16 @@ p {
         height: 170px;
     }
 
-    .img-quad-shadow {
+    .img-phone {
         width: 510px;
     }
 }
 
 @media (max-width: 1000px) {
-
+    .img-phone{
+        top: 10%;
+    bottom: auto;
+    }
     .services-title,
     .advantages-title {
         padding-bottom: 10px;

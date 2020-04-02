@@ -13,7 +13,7 @@ sass.compiler = require('node-sass');
 gulp.task('scss', function () {
   return gulp.src('app/scss/**/*.scss')
     .pipe(sass({outputStyle:'compressed'}))
-    .pipe(gulp.dest('dist/css/main.css'));
+    .pipe(gulp.dest('dist/css'));
 });
  
 gulp.task('scss:watch', function () {
